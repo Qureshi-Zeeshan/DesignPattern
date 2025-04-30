@@ -5,7 +5,9 @@ namespace DesignPattern
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World");
+            SingletonDemo obj =  SingletonDemo.get_singleton();
+            SingletonDemo obj1 = SingletonDemo.get_singleton();
+
         }
     }
 }
