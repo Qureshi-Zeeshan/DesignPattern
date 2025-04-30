@@ -1,0 +1,32 @@
+# Ignore Visual Studio temporary files, directories, and files
+.vs/
+.vscode/
+.idea/
+
+# Ignore build directories
+bin/
+obj/
+
+# User-specific files (created by Visual Studio)
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Ignore ASP.NET Scaffolding files
+ScaffoldingReadMe.txt
+
+# Ignore IIS Express config folder
+.IISExpress/
+
+# Ignore JetBrains Rider config files
+.idea/
+
+# Ignore VS Code settings
+.vscode/
