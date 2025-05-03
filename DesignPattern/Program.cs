@@ -1,7 +1,8 @@
 ﻿using System;
+using DesignPattern;
 namespace DesignPattern
 {
-    class DesignPattern
+    class DesignProgram
     {
         public static void Main(string[] args)
         {
@@ -19,6 +20,17 @@ namespace DesignPattern
             Get_Vehicle honda = new Honda();
             Ibike honda_bike =honda.GetBike();
             honda_bike.bike();
+
+            lazyloading ll = lazyloading.Instance;
+            Console.WriteLine(ll);
+
+            Console.WriteLine();
+            Console.WriteLine();
+
+            Builder builder = new Builder();
+            Make_Vehicle make_vehicle = builder.Set_Type("Sedan").Build();
+            Console.WriteLine(make_vehicle.AWD);
+
 
         }
     }

@@ -24,6 +24,8 @@ namespace DesignPattern
         }
 
     }
+
+    //sigleton using lazy
     internal sealed class lazyloading
     {
         private static readonly Lazy<lazyloading> instance=new Lazy<lazyloading>(() => new lazyloading());
