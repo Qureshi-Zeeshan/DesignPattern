@@ -31,6 +31,9 @@ namespace DesignPattern
             Make_Vehicle make_vehicle = builder.Set_Type("Sedan").Build();
             Console.WriteLine(make_vehicle.AWD);
 
+            Builder suvbuilder =new Builder();
+            ReadyMadeVehicle MakingSuv = new ReadyMadeVehicle(suvbuilder);
+            Make_Vehicle Suv =MakingSuv.MakeSuv().Build();
 
         }
     }

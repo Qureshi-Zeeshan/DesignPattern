@@ -46,4 +46,24 @@ namespace DesignPattern
         }
         public Make_Vehicle Build() => MV;
     }
+    internal class ReadyMadeVehicle
+    {
+        Builder makingvehichle;
+        public ReadyMadeVehicle(Builder MakeVehicle)
+        {
+            makingvehichle = MakeVehicle;
+        }
+        public Builder MakeSuv()
+        {
+            makingvehichle.Set_AWD()
+                .Set_Ice()
+                .Set_Brand("Toyota");
+            return makingvehichle;
+        }
+        public Builder MakeElectric()
+        {
+            makingvehichle.Set_Electric().Set_AWD().Set_Brand("BYD");
+            return makingvehichle;
+        }
+    }
 }
