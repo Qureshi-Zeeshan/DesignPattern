@@ -6,7 +6,7 @@ namespace DesignPattern
     {
         public static void Main(string[] args)
         {
-            SingletonDemo obj =  SingletonDemo.get_singleton();
+            SingletonDemo obj = SingletonDemo.get_singleton();
             SingletonDemo obj1 = SingletonDemo.get_singleton();
 
             Vehicle_Info bike = factory.vehicle_factory("bike");
@@ -18,7 +18,7 @@ namespace DesignPattern
             Console.WriteLine();
 
             Get_Vehicle honda = new Honda();
-            Ibike honda_bike =honda.GetBike();
+            Ibike honda_bike = honda.GetBike();
             honda_bike.bike();
 
             lazyloading ll = lazyloading.Instance;
@@ -31,19 +31,28 @@ namespace DesignPattern
             Make_Vehicle make_vehicle = builder.Set_Type("Sedan").Build();
             Console.WriteLine(make_vehicle.AWD);
 
-            Builder suvbuilder =new Builder();
+            Builder suvbuilder = new Builder();
             ReadyMadeVehicle MakingSuv = new ReadyMadeVehicle(suvbuilder);
-            Make_Vehicle Suv =MakingSuv.MakeSuv().Build();
+            Make_Vehicle Suv = MakingSuv.MakeSuv().Build();
 
             Console.WriteLine();
             Console.WriteLine();
 
             IPizza pizza = new SimplePizza();
-            Console.WriteLine(pizza.description() + " "+pizza.price());
+            Console.WriteLine(pizza.description() + " " + pizza.price());
             pizza = new Cheese(pizza);
             pizza = new Peporoni(pizza);
-            Console.WriteLine(pizza.description() + " "+pizza.price());
+            Console.WriteLine(pizza.description() + " " + pizza.price());
 
+            Console.WriteLine();
+            Console.WriteLine();
+
+            Prototype prototype = new Prototype();
+            prototype.IPAddress="234.456.345";
+            prototype.Data = "Very Expensive data";
+
+            Prototype clonePrototype= prototype.Clone();
+            clonePrototype.SeeInfo();
 
         }
     }
