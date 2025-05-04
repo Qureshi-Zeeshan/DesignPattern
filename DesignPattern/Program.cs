@@ -35,6 +35,16 @@ namespace DesignPattern
             ReadyMadeVehicle MakingSuv = new ReadyMadeVehicle(suvbuilder);
             Make_Vehicle Suv =MakingSuv.MakeSuv().Build();
 
+            Console.WriteLine();
+            Console.WriteLine();
+
+            IPizza pizza = new SimplePizza();
+            Console.WriteLine(pizza.description() + " "+pizza.price());
+            pizza = new Cheese(pizza);
+            pizza = new Peporoni(pizza);
+            Console.WriteLine(pizza.description() + " "+pizza.price());
+
+
         }
     }
 }
