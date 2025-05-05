@@ -54,6 +54,17 @@ namespace DesignPattern
             Prototype clonePrototype= prototype.Clone();
             clonePrototype.SeeInfo();
 
+            Console.WriteLine();
+            Console.WriteLine();
+
+            Subject cSharp =new Subject();
+            Observers Zeeshan= new Observers("Zeeshan");
+            cSharp.Attach(Zeeshan);
+            cSharp.NewContent("Concurrency");
+            Console.WriteLine(cSharp.ShowObservers());
+
+            
+
         }
     }
 }
