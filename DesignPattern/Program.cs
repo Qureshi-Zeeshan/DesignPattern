@@ -63,6 +63,18 @@ namespace DesignPattern
             cSharp.NewContent("Concurrency");
             Console.WriteLine(cSharp.ShowObservers());
 
+            Console.WriteLine();
+            Console.WriteLine();
+
+            Subject2 subject2 =new Subject2();
+            IObserver2 Device1 = new Observer2("Device1");
+            IObserver2 Device2 = new Observer2("Device2");
+            IObserver2 Device3 = new Observer2("Device3");
+            subject2.Attach(Device1);
+            subject2.Attach(Device2);
+            subject2.Attach(Device3);
+
+            subject2.SetTemperature("50 degree");
             
 
         }
