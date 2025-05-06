@@ -48,17 +48,17 @@ namespace DesignPattern
             Console.WriteLine();
 
             Prototype prototype = new Prototype();
-            prototype.IPAddress="234.456.345";
+            prototype.IPAddress = "234.456.345";
             prototype.Data = "Very Expensive data";
 
-            Prototype clonePrototype= prototype.Clone();
+            Prototype clonePrototype = prototype.Clone();
             clonePrototype.SeeInfo();
 
             Console.WriteLine();
             Console.WriteLine();
 
-            Subject cSharp =new Subject();
-            Observers Zeeshan= new Observers("Zeeshan");
+            Subject cSharp = new Subject();
+            Observers Zeeshan = new Observers("Zeeshan");
             cSharp.Attach(Zeeshan);
             cSharp.NewContent("Concurrency");
             Console.WriteLine(cSharp.ShowObservers());
@@ -66,7 +66,7 @@ namespace DesignPattern
             Console.WriteLine();
             Console.WriteLine();
 
-            Subject2 subject2 =new Subject2();
+            Subject2 subject2 = new Subject2();
             IObserver2 Device1 = new Observer2("Device1");
             IObserver2 Device2 = new Observer2("Device2");
             IObserver2 Device3 = new Observer2("Device3");
@@ -75,7 +75,18 @@ namespace DesignPattern
             subject2.Attach(Device3);
 
             subject2.SetTemperature("50 degree");
-            
+
+
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
+
+            Aggregate Library =new Aggregate();
+            Iterator iterate = new Iterator(Library);
+            Library.AddBook("Harry Potter");
+            Library.AddBook("The song of Ice and fierce");
+            Console.WriteLine(iterate.Next()+ "\n" +Library.TotalBooks() );
+
 
         }
     }
